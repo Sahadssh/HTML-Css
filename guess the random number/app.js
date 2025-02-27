@@ -1,46 +1,103 @@
-const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
-const assignedNumbers = {}; 
+ document.addEventListener("DOMContentLoaded", function () {
 
-
-const submitBtn = document.getElementById("submitBtn");
-const textInput = document.getElementById("textInput");
+const numberinput = document.getElementById("numberInput");
+const submitNumberBtn  = document.getElementById("submitNumberBtn");
+const formContainer = document.getElementById("formContainer")
 const output = document.getElementById("output");
 const message = document.getElementById("message");
 
-let results = []; 
-submitBtn.addEventListener("click", function () {
-    const inputText = textInput.value.trim(); 
-    
-    if (inputText === "") {
-        alert("Please enter a name.");
-        return;
-    }
 
-    if (numbers.length === 0) {
-        message.innerText = "All numbers have been assigned!";
-        return;
-    }
+let remainingEntries = 0;
+let maxnumber = 0;
+let availableNumbers = [];
+let results = [];
+let assignedNumbers = {};
+let textInput, submitTextBtn;
 
-    let selectedNumber;
-    
-  
-    if (inputText in assignedNumbers) {
-        selectedNumber = assignedNumbers[inputText];
-    } else if (numbers.length > 0) {
-      
-        const randomIndex = Math.floor(Math.random() * numbers.length);
-        selectedNumber = numbers.splice(randomIndex, 1)[0];
-        assignedNumbers[inputText] = selectedNumber; 
-    }
 
-  
-    if (selectedNumber !== undefined) {
-        results.push(`${inputText} → Number: ${selectedNumber}`);
-        output.innerHTML = results.join("<br>");
-    }
+    submitNumberBtn.addEventListener("click", function () {
+        const numberValue = parseInt(numberInput.value.trim(), 10);
 
-    
-    if (numbers.length === 0) {
-        message.innerText = "All numbers have been assigned!";
-    }
-});
+        if (isNaN(numberValue) || numberValue <= 0) {
+            alert("Please enter a valid positive number.");
+            return;
+        }
+
+            remainingEntries = numberValue;
+            maxnumber = numberValue;
+            availableNumbers = Array.from({  length: maxnumber},(_,i)=> i+ 1)
+            // numberInput.disabled = true;
+
+
+            if(!textInput){
+                textInput = document.createElement("input");
+                textInput.id = "text";
+                textInput.type = "text";
+                textInput.placeholder = "Enter a text";
+
+                formContainer.appendChild(textInput);
+
+                submitTextBtn = document.createElement("button");
+                submitTextBtn.id = "submitTextbtn";
+                submitTextBtn.innerText = "Submit Text";
+                formContainer.appendChild(submitTextBtn);
+
+
+                submitTextBtn.addEventListener("click",handletextSubmit);
+            }
+                textInput.disabled = false;
+                message.innerText = `you can enter ${remainingEntries} unique texts`;
+        });
+
+            function handletextSubmit(){
+                if(remainingEntries <=0){
+                    alert("you need to enter a new number first");
+                    return;
+
+                }
+
+                const textvalue = textInput.value.trim();
+                if(textvalue === ""){
+                    alert("please enter some text");
+                    return
+                }
+
+                let selectedNumber;
+
+                if(assignedNumbers[textvalue] !== undefined){
+                    selectedNumber = assignedNumbers[textvalue];
+                }else{
+                    selectedNumber = Math.floor(Math.random() * availableNumbers.length);
+                    selectedNumber = availableNumbers.splice(selectedNumber,1)[0];
+                    assignedNumbers[textvalue] = selectedNumber;
+                    remainingEntries--;
+
+                }
+
+
+                results.push(`text: ${textvalue} number: ${selectedNumber}`)
+                output.innerHTML = results.join("<br>");
+                message.innerText = `you can enter ${remainingEntries} more unique tests`;
+
+                if(remainingEntries === 0){
+                    textInput.disabled = true;
+                    numberinput.disabled = false;
+                    message.innerText = "enter a new number to start again";
+                }
+
+                textInput.value ="";
+            }
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
