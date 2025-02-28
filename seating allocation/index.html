@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Seating Allocation</h2>
-
-    <label for="employeeName">Employee Name:</label>
-    <input type="text" id="employeeName" name="employeeName">
-    <button id="addEmployee">Add Employee</button>
-    <button id="displayEmployees">Display Employees</button>
-
-    <div class="employee-container"></div>
-
+    <div class="container">
+        <input type="text" id="employeeName" placeholder="Enter Employee Name">
+        <button onclick="storeEmployee()">Store Employee Name</button>
+        <button onclick="displayEmployees()">Display Employees</button>
+    </div>
+    <div class="cabins" id="cabinsContainer">
+        <div class="cabin" id="cabin1"></div>
+        <div class="cabin" id="cabin2"></div>
+        <div class="cabin" id="cabin3"></div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

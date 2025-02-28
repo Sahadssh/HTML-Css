@@ -1,70 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const employeeInput = document.getElementById("employeeName");
-    const addButton = document.createElement("button");
-    addButton.textContent = "Add Employee";
-    addButton.id = "addEmployee";
-    document.body.appendChild(addButton);
-    
-    const displayButton = document.createElement("button");
-    displayButton.textContent = "Display Employees";
-    displayButton.id = "displayEmployees";
-    document.body.appendChild(displayButton);
-    
-    const employeeContainer = document.createElement("div");
-    employeeContainer.classList.add("employee-container");
-    document.body.appendChild(employeeContainer);
+let employees = JSON.parse(localStorage.getItem("employees")) || [];
 
-    let employees = JSON.parse(localStorage.getItem("employees")) || [];
+function storeEmployee() {
+    const nameInput = document.getElementById("employeeName");
+    let name = nameInput.value.trim();
 
-    addButton.addEventListener("click", function () {
-        const name = employeeInput.value.trim();
-        if (name && employees.length < 18) {
-            if (!employees.includes(name)) {
-                employees.push(name);
-                localStorage.setItem("employees", JSON.stringify(employees));
-                employeeInput.value = "";
-            } else {
-                alert("This name is already added. Please enter a different name.");
-            }
-        }
-        if (employees.length >= 18) {
-            employeeInput.disabled = true;
-            alert("Maximum 18 employees added!");
-        }
-    });
+    if (name !== "" && employees.length < 18) {
+        employees.push(name);
+        localStorage.setItem("employees", JSON.stringify(employees));
+        nameInput.value = "";
+    }
+}
 
-    displayButton.addEventListener("click", function () {
-        if (employees.length === 0) {
-            alert("No employees added yet!");
-            return;
-        }
-        shuffleArray(employees);
-        displayEmployees();
-    });
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 
-    function displayEmployees() {
-        employeeContainer.innerHTML = "";
-        const officeBoxes = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
-        officeBoxes.forEach((box, index) => {
-            box.classList.add("office-box");
-            box.setAttribute("id", `office-${index + 1}`);
-        });
+function displayEmployees() {
+    employees = JSON.parse(localStorage.getItem("employees")) || [];
 
-        employees.forEach((employee, index) => {
-            const div = document.createElement("div");
-            div.textContent = employee;
-            div.classList.add("employee-name");
-            officeBoxes[Math.floor(index / 6)].appendChild(div);
-        });
-
-        employeeContainer.innerHTML = "";
-        officeBoxes.forEach(box => employeeContainer.appendChild(box));
+    if (employees.length === 0) {
+        alert("No employees stored yet!");
+        return;
     }
 
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
-});
+    shuffleArray(employees); 
+    localStorage.setItem("employees", JSON.stringify(employees));
+
+    document.getElementById("cabinsContainer").style.display = "flex";
+
+    const cabins = [[], [], []];
+    employees.forEach((name, index) => {
+        cabins[Math.floor(index / 6)].push({ number: index + 1, name }); 
+    });
+
+    document.getElementById("cabin1").innerHTML = `<h3>Cabin 1</h3>${cabins[0].map(emp => `<p>${emp.number}. ${emp.name}</p>`).join("")}`;
+    document.getElementById("cabin2").innerHTML = `<h3>Cabin 2</h3>${cabins[1].map(emp => `<p>${emp.number}. ${emp.name}</p>`).join("")}`;
+    document.getElementById("cabin3").innerHTML = `<h3>Cabin 3</h3>${cabins[2].map(emp => `<p>${emp.number}. ${emp.name}</p>`).join("")}`;
+}
