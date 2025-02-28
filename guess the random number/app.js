@@ -26,8 +26,8 @@ let textInput, submitTextBtn;
             remainingEntries = numberValue;
             maxnumber = numberValue;
             availableNumbers = Array.from({  length: maxnumber},(_,i)=> i+ 1)
-            // numberInput.disabled = true;
-
+          
+        
 
             if(!textInput){
                 textInput = document.createElement("input");
