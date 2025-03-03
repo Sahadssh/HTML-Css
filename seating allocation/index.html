@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seating Allocation</title>
+    <title>Employee Cabin Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <input type="text" id="employeeName" placeholder="Enter Employee Name">
-        <button onclick="storeEmployee()">Store Employee Name</button>
+        <button onclick="storeEmployee()">Add Employee</button>
+    </div>
+
+    <div class="container">
         <button onclick="displayEmployees()">Display Employees</button>
     </div>
-    <div class="cabins" id="cabinsContainer">
-        <div class="cabin" id="cabin1"></div>
-        <div class="cabin" id="cabin2"></div>
-        <div class="cabin" id="cabin3"></div>
+
+    <div class="cabin-inputs">
+        <input type="number" id="cabin1Count" placeholder="Cabin 1">
+        <input type="number" id="cabin2Count" placeholder="Cabin 2">
+        <input type="number" id="cabin3Count" placeholder="Cabin 3">
+        <button onclick="setCabins()">Set Cabin spot</button>
     </div>
+
+    <div class="cabins" id="cabinsContainer">
+        <div class="cabin" id="cabin1"><h3>Cabin 1</h3></div>
+        <div class="cabin" id="cabin2"><h3>Cabin 2</h3></div>
+        <div class="cabin" id="cabin3"><h3>Cabin 3</h3></div>
+    </div>
+
+    <div id="employeeList"></div>
+
     <script src="app.js"></script>
 </body>
 </html>
