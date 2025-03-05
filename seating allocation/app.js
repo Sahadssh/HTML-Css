@@ -1,7 +1,7 @@
-
-
 let employees = JSON.parse(localStorage.getItem("employees")) || [];
- displayEmployeeList(); 
+
+
+displayEmployeeList(); 
 function storeEmployee (){
     const nameInput = document.getElementById("employeeName");
     let name = nameInput.value.trim();
@@ -95,5 +95,7 @@ function deleteEmployee(index) {
 
 window.onload = displayEmployeeList;
 }
+
+
 
 

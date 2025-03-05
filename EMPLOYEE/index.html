@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Cabin Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" id="employeeName" placeholder="Enter Employee Name">
+        <button onclick="storeEmployee()">Add Employee</button>
+    </div>
+
+    <div class="container">
+        <button onclick="displayEmployees()">Display Employees</button>
+    </div>
+
+    <div class="cabin-inputs">
+        <input type="number" id="cabin1Count" placeholder="Cabin 1">
+        <input type="number" id="cabin2Count" placeholder="Cabin 2">
+        <input type="number" id="cabin3Count" placeholder="Cabin 3">
+        <button onclick="setCabins()">Set Cabin Spot</button>
+    </div>
+
+    <div id="setsContainer">
+        <div class="set" id="set1">
+            <h2>Set 1</h2>
+            <div class="cabins">
+                <div class="cabin" id="set1-cabin1"><h3>Cabin 1</h3></div>
+                <div class="cabin" id="set1-cabin2"><h3>Cabin 2</h3></div>
+                <div class="cabin" id="set1-cabin3"><h3>Cabin 3</h3></div>
+            </div>
+        </div>
+
+        <div class="set" id="set2">
+            <h2>Set 2</h2>
+            <div class="cabins">
+                <div class="cabin" id="set2-cabin1"><h3>Cabin 1</h3></div>
+                <div class="cabin" id="set2-cabin2"><h3>Cabin 2</h3></div>
+                <div class="cabin" id="set2-cabin3"><h3>Cabin 3</h3></div>
+            </div>
+        </div>
+
+        <div class="set" id="set3">
+            <h2>Set 3</h2>
+            <div class="cabins">
+                <div class="cabin" id="set3-cabin1"><h3>Cabin 1</h3></div>
+                <div class="cabin" id="set3-cabin2"><h3>Cabin 2</h3></div>
+                <div class="cabin" id="set3-cabin3"><h3>Cabin 3</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
