@@ -133,3 +133,8 @@ function deleteEmployee(index) {
 }
 
 window.onload = displayEmployeeList;
+
+
+function checkbox(){
+    
+}
