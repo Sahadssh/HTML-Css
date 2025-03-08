@@ -1,11 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 
 body {
     background-color: rgb(194, 159, 192);
@@ -15,14 +13,12 @@ body {
     min-height: 100vh;
 }
 
-
 .container {
     background-color: white;
     padding: 50px;
     width: 600px;
     border-radius: 20px;
 }
-
 
 .todo-header {
     display: flex;
@@ -75,7 +71,6 @@ ul li {
     margin-bottom: 10px;
     border-radius: 5px;
 }
-
 
 li div {
     display: flex;

@@ -3,7 +3,7 @@ let clickCount = 0;
 const sets = [[], [], []];
 let uniqueCabinEnabled = false;
 
-// Store a new employee in localStorage
+
 function storeEmployee() {
     const nameInput = document.getElementById("employeeName");
     let name = nameInput.value.trim();
@@ -15,7 +15,7 @@ function storeEmployee() {
     displayEmployeeList();
 }
 
-// Display the list of stored employees
+
 function displayEmployeeList() {
     const employeeListContainer = document.getElementById("employeeList");
     employeeListContainer.innerHTML = employees.map((name, index) =>
@@ -23,19 +23,19 @@ function displayEmployeeList() {
     ).join(" ");
 }
 
-// Delete an employee from localStorage
+
 function deleteEmployee(index) {
     employees.splice(index, 1);
     localStorage.setItem("employees", JSON.stringify(employees));
     displayEmployeeList();
 }
 
-// Toggle unique cabin restriction based on checkbox
+
 function toggleUniqueCabin() {
     uniqueCabinEnabled = document.getElementById("uniqueCabinRestriction").checked;
 }
 
-// Shuffle an array (randomize elements)
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -43,7 +43,7 @@ function shuffleArray(array) {
     }
 }
 
-// Generate a unique set of cabins while avoiding previous sets if restriction is enabled
+
 function generateUniqueSet(previousSets) {
     let remainingEmployees = [...employees];
     let newSet = [[], [], []];
@@ -65,7 +65,7 @@ function generateUniqueSet(previousSets) {
     return newSet;
 }
 
-// Handle cabin assignment logic based on clicks
+
 function displayEmployees() {
     employees = JSON.parse(localStorage.getItem("employees")) || [];
     if (employees.length < 18) {
@@ -100,7 +100,7 @@ function displayEmployees() {
     updateCabins();
 }
 
-// Update the cabin display based on sets
+
 function updateCabins() {
     for (let setIndex = 0; setIndex < 3; setIndex++) {
         for (let cabinIndex = 0; cabinIndex < 3; cabinIndex++) {
@@ -127,5 +127,5 @@ function updateCabins() {
     }
 }
 
-// Initialize employee list on page load
+
 window.onload = displayEmployeeList;
