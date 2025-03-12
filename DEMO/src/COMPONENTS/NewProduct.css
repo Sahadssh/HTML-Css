@@ -1,0 +1,23 @@
+.new-product {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .new-product button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .new-product button:hover {
+    background-color: #e68900;
+  }
+  
