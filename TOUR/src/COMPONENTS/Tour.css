@@ -1,0 +1,79 @@
+.tour-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cards per row */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Increase card size */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.tour-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.tour-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.tour-price {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
+
+.description {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: blue;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px; /* Adds spacing between text and button */
+    display: inline;
+}
+.read-more:hover {
+    color: darkblue;
+}
+
+.btn-red {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 0 0 12px 12px;
+}
+
+.btn-red:hover {
+    background-color: #cc0000;
+}
