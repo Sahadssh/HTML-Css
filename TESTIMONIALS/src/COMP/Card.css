@@ -1,0 +1,72 @@
+/* Card Container */
+.card {
+    width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Profile Image */
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+}
+
+/* Name & Job */
+.card .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.card .job {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Quote Icons */
+.card .quote-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+/* Review Text */
+.card .text {
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Buttons */
+.card button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #0056b3;
+}
+
+.arrow{
+    display: flex;
+   
+}
