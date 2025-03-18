@@ -1,0 +1,27 @@
+.filter-container {
+    text-align: center;
+    margin-top: 80px;
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 10px; 
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #388c2d;
+    color: white;
+    border-color: #388c2d; 
+    transform: scale(1.05); 
+}

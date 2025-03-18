@@ -1,0 +1,45 @@
+.heart-icon {
+  background: none;
+  border: 2px solid #fff; /* White border */
+  border-radius: 50%; /* Makes the button circular */
+  padding: 8px; /* Space around the heart icon */
+  font-size: 24px;
+  color: #fff; /* Heart icon color */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+  width: 40px; /* Size of the circular button */
+  height: 40px; /* Size of the circular button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px; /* Adjust position of the heart button */
+  right: 10px; /* Adjust position of the heart button */
+}
+
+.heart-icon:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.heart-icon:focus {
+  outline: none; /* Remove outline when button is focused */
+}
+
+.heart-svg {
+  width: 20px; /* Width of the heart icon */
+  height: 20px; /* Height of the heart icon */
+}
+
+.heart-icon.liked {
+  background-color: #f87171; /* Red background when liked */
+  border-color: #f87171; /* Red border when liked */
+}
+
+.heart-icon.unliked {
+  background-color: #e0e0e0; /* Gray background when not liked */
+  border-color: #e0e0e0; /* Gray border when not liked */
+}
+
+.card {
+  position: relative;
+}

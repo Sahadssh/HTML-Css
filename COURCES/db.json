@@ -1,0 +1,122 @@
+{
+  "Development": [
+    {
+      "id": 1,
+      "name": "Development",
+      "info": "Learn programming languages, web development, app development, and software engineering from beginner to advanced levels.",
+      "image": "https://avatars.mds.yandex.net/i?id=3dcb40181cde9a7954744eff3631213476bfaa40-4478420-images-thumbs&n=13",
+      "price": 2999
+    },
+    {
+      "id": 11,
+      "name": "Web Development",
+      "info": "Learn to build responsive websites using HTML, CSS, JavaScript, and modern frameworks.",
+      "image": "https://avatars.mds.yandex.net/i?id=bc0e4e90b7441ff1962f2f60ec05dbd9164f4967-4591504-images-thumbs&n=13",
+      "price": 2999
+    },
+    {
+      "id": 12,
+      "name": "Mobile App Development",
+      "info": "Master Android and iOS app development using Flutter, React Native, and Swift.",
+      "image": "https://avatars.mds.yandex.net/i?id=00ae9c31dbef184c5201f89550a39e8a7f3536dc-12004727-images-thumbs&n=13",
+      "price": 3499
+    }
+  ],
+  "Business": [
+    {
+      "id": 2,
+      "name": "Business",
+      "info": "Master entrepreneurship, finance, marketing, and business strategy to grow your startup or corporate career.",
+      "image": "https://avatars.mds.yandex.net/i?id=9bac18942559937ca624e4c2b6127825ee395479-10870279-images-thumbs&n=13",
+      "price": 3499
+    },
+    {
+      "id": 6,
+      "name": "Marketing",
+      "info": "Learn digital marketing, SEO, social media strategies, and branding to grow businesses online.",
+      "image": "https://avatars.mds.yandex.net/i?id=e60a987bf123b1685af1fdda82963281dd9aa245-5879065-images-thumbs&n=13 ",
+      "price": 3199
+    },
+    {
+      "id": 7,
+      "name": "Personal Development",
+      "info": "Enhance your soft skills, confidence, public speaking, and leadership abilities.",
+      "image": "https://avatars.mds.yandex.net/i?id=19885dd4af1ba2dd803ddadca057868ed70118cd-3807742-images-thumbs&n=13",
+      "price": 2799
+    },
+    {
+      "id": 10,
+      "name": "Finance & Investing",
+      "info": "Learn financial management, stock trading, cryptocurrency, and wealth building.",
+      "image": "https://avatars.mds.yandex.net/i?id=988ca6d00db6c6eeef88c6597ebe8b83415a39a3-12384085-images-thumbs&n=13",
+      "price": 3499
+    },
+    {
+      "id": 13,
+      "name": "Entrepreneurship",
+      "info": "Start your own business and learn the fundamentals of running a successful startup.",
+      "image": "https://avatars.mds.yandex.net/i?id=5592a7c7034a227237c207fff16ec7adb2764400-9181263-images-thumbs&n=13",
+      "price": 3999
+    },
+    {
+      "id": 14,
+      "name": "Sales & Negotiation",
+      "info": "Improve your sales skills and negotiation tactics to close deals effectively.",
+      "image": "https://avatars.mds.yandex.net/i?id=3aa97472e3c193f9dd36c81e1b4ca94188d151ee-4571079-images-thumbs&n=13",
+      "price": 3299
+    }
+  ],
+  "Design": [
+    {
+      "id": 3,
+      "name": "Design",
+      "info": "Explore UI/UX design, graphic design, branding, and creative tools like Photoshop, Figma, and Illustrator.",
+      "image": "https://avatars.mds.yandex.net/i?id=dd825f4eae45d1d8a739a8816b5343ee6a9a481f-4259532-images-thumbs&n=13",
+      "price": 2799
+    },
+    {
+      "id": 5,
+      "name": "Photography",
+      "info": "Master the art of photography, including DSLR techniques, editing, and storytelling through visuals.",
+      "image": "https://avatars.mds.yandex.net/i?id=1c0c0cb6b156126dbe39c51f5adde0923f79ceee-7020528-images-thumbs&n=13",
+      "price": 2599
+    },
+    {
+      "id": 15,
+      "name": "Graphic Design",
+      "info": "Master Adobe Photoshop, Illustrator, and other graphic design tools.",
+      "image": "https://avatars.mds.yandex.net/i?id=84793dd86bff1c0f58e72542c385eedd5aae4570-4080015-images-thumbs&n=13",
+      "price": 2799
+    }
+  ],
+  "Lifestyle": [
+    {
+      "id": 4,
+      "name": "Lifestyle",
+      "info": "Improve your personal development, productivity, health, and wellness through expert-led courses.",
+      "image": "https://avatars.mds.yandex.net/i?id=d747ae77609015aafbae689f97c045a35dc08220-10637411-images-thumbs&n=13",
+      "price": 1999
+    },
+    {
+      "id": 8,
+      "name": "Music",
+      "info": "Learn musical instruments, music production, and songwriting from experienced professionals.",
+      "image": "https://avatars.mds.yandex.net/i?id=334cf7128b075a35225ac655dc97ce4165ad0d99-5389050-images-thumbs&n=13",
+      "price": 2499
+    },
+    {
+      "id": 9,
+      "name": "Health & Fitness",
+      "info": "Stay fit with courses on yoga, bodybuilding, nutrition, and mental wellness.",
+      "image": "https://avatars.mds.yandex.net/i?id=1b1c492e88ec05e7b924dd0689f73c0acbc3d7ff-7662207-images-thumbs&n=13",
+      "price": 1999
+    },
+    {
+      "id": 16,
+      "name": "Wellness & Mindfulness",
+      "info": "Learn techniques for stress management, meditation, and overall well-being.",
+      "image": "https://avatars.mds.yandex.net/i?id=659c8f99f1af7bc930564c283b2c20d2620e928c-5873252-images-thumbs&n=13",
+      "price": 2499
+    }
+  ]
+}
