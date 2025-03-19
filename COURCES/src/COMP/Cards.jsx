@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import "./Cards.css"; // Import the CSS file
+import "./Cards.css"; 
 
 function Cards({ courses, handleHeartClick }) {
   return (

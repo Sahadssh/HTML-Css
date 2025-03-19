@@ -1,17 +1,16 @@
 import React, { useState } from "react";
+import "./Card.css";
 
 function Card({ course, handleHeartClick }) {
-  // Add a state for whether the heart is liked or not
   const [isLiked, setIsLiked] = useState(false);
 
-  // Toggle the heart state and show toast when clicked
   const handleHeartToggle = () => {
-    setIsLiked(!isLiked); // Toggle the like state
-    handleHeartClick(isLiked); // Show success toast
+    setIsLiked(!isLiked);
+    handleHeartClick(isLiked);
   };
 
   return (
-    <div className="col-2">
+    <div className="col-3">
       <div className="card">
         <div className="relative">
           <img
@@ -19,21 +18,23 @@ function Card({ course, handleHeartClick }) {
             alt={course.name}
             className="w-full h-40 object-cover rounded-md"
           />
-          {/* Heart Icon inside a circular button */}
+          {/* Heart Button */}
           <button
-            className={`heart-icon absolute top-2 right-2 ${isLiked ? "liked" : "unliked"}`}
+            className={`heart-icon ${isLiked ? "liked" : "unliked"}`}
             onClick={handleHeartToggle}
           >
-            {/* SVG Heart Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill={isLiked ? "#f87171" : "none"} // Red when liked, transparent when unliked
-              stroke={isLiked ? "#f87171" : "#e0e0e0"} // Red stroke when liked, gray when unliked
+              fill={isLiked ? "#f87171" : "none"}
+              stroke={isLiked ? "#f87171" : "#e0e0e0"}
               className="heart-svg"
             >
               <path
                 fill="none"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
               />
             </svg>

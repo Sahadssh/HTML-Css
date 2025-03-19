@@ -16,5 +16,5 @@ git merge new-branch	        Merge a branch
 git log	                        View commit history
  
 
-
+json-server --watch db.json --port 3001
  npm create vite@latest
