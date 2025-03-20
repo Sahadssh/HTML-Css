@@ -6,6 +6,7 @@ function App() {
 
   function decreaseHandler() {
     setCount(count - 1);
+    
   }
 
   function increaseHandler() {
