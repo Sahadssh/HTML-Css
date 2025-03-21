@@ -1,0 +1,129 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.signup-box {
+    width: 450px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #ff7eb3;
+}
+
+.signup-subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #eee;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff7eb3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-button:hover {
+    background: #ff5283;
+}
+
+
+.login-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff7eb3;
+}
+
+.login-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+@media (max-width: 500px) {
+    .signup-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

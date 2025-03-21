@@ -1,0 +1,164 @@
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  
+  }
+  
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;     
+  }
+  
+  .login-box {
+    width: 400px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Typography */
+  h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .login-subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ddd;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    color: #eee;
+    display: block;
+    margin-bottom: 7px;
+    
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Login Button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff7eb3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-button:hover {
+    background: #ff5283;
+  }
+  
+  /* Forgot Password & Sign-up */
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .forgot-password {
+    color: #ff7eb3;
+    text-decoration: none;
+  }
+  
+  .signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .signup-link a {
+    color: #ff7eb3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Social Buttons */
+  .social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .social-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .social-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .login-box {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
+
+  /* Change color of "Welcome Back" */
+.login-box h2 {
+    color: #ff7eb3; /* Replace with your desired color */
+  }
+  
+  /* Change color of "Don't have an account?" text */
+  .signup-link {
+    color: #ff7eb3; /* Replace with your desired color */
+  }
+  
+  /* Ensure the link inside "Don't have an account?" is not affected */
+  .signup-link a {
+    color: #ffffff; /* Keep link color different if needed */
+  }
+  
