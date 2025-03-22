@@ -1,0 +1,93 @@
+/* Navbar Styling - Ensures it's fixed at the top */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Pushes content down so it doesn’t hide under the fixed navbar */
+.content {
+    margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust space between cards */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Card styling */
+.card {
+    width: 350px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+/* Title inside the card */
+.card h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* GIF Image */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Input field */
+.card input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Placeholder color */
+.card input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+/* Button */
+.card button {
+    width: 100%;
+    background: #f9a826;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #ff8c00;
+}
