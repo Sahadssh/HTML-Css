@@ -1,0 +1,26 @@
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    position: relative; /* Change from fixed to relative */
+    bottom: 0;
+    margin-top: 20px; /* Space above footer */
+  }
+  
+  .footer button {
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .footer button:hover {
+    background: #0056b3;
+  }
+  

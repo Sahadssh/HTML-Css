@@ -1,8 +1,10 @@
+// src/App.jsx
+
 import Header from "./Components/Header";
 import Content from "./Components/Content";
 import Pages from "./Components/Pages";
-import { AppProvider } from "./context/AppContext";
-import "./styles.css"; 
+import { AppProvider } from "./Context/AppContext";
+import "./styles.css";
 
 function App() {
   return (

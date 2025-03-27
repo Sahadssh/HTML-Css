@@ -1,22 +1,20 @@
+// src/Components/Pages.jsx
+
 import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../Context/AppContext";
 
 function Pages() {
-  const { page, nextPage, prevPage } = useContext(AppContext);
+  const { page, nextPage, prevPage, totalPages } = useContext(AppContext);
 
   return (
     <footer>
-      {/* Show Previous button only if page > 1 */}
-      {page > 1 && (
-        <button onClick={prevPage}>Previous</button>
-      )}
-
-      <span>Page {page} of 6</span>
-
-      {/* Show Next button only if page < 6 */}
-      {page < 6 && (
-        <button onClick={nextPage}>Next</button>
-      )}
+      <button onClick={prevPage} disabled={page === 1}>
+        Prev
+      </button>
+      <span> Page {page} of {totalPages} </span>
+      <button onClick={nextPage} disabled={page === totalPages}>
+        Next
+      </button>
     </footer>
   );
 }

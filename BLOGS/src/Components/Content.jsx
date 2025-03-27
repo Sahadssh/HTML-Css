@@ -1,22 +1,25 @@
+// src/Components/Content.jsx
+
 import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
-import Spinner from "./Spinner";
+import { AppContext } from "../Context/AppContext";
 
 function Content() {
   const { posts, loading } = useContext(AppContext);
 
-  if (loading) {
-    return <Spinner />;
-  }
-
   return (
     <main>
-      {posts.map((post) => (
-        <article key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </article>
-      ))}
+      {loading ? (
+        <div className="spinner-container">
+          <div className="spinner"></div>
+        </div>
+      ) : (
+        posts.map((post) => (
+          <article key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </article>
+        ))
+      )}
     </main>
   );
 }

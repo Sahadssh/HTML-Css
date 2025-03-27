@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import './Logout.css'
+import { AuthContext } from "../components/AuthContext";
+import "./Logout.css";
 
 function Logout() {
+  const { logout } = useContext(AuthContext); // Get logout function from context
   const navigate = useNavigate();
 
   useEffect(() => {
-   
-    localStorage.removeItem("isLoggedIn");
+    logout(); // Log the user out
 
-    
     setTimeout(() => {
       navigate("/login");
     }, 2000);
-  }, [navigate]);
+  }, [logout, navigate]);
 
   return (
     <div className="page-container">

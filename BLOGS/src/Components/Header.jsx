@@ -1,20 +1,21 @@
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+// src/Components/Header.jsx
 
-export default function Header() {
-  const { toggleTheme, isDarkMode } = useContext(AppContext);
+import { useContext } from "react";
+import { AppContext } from "../Context/AppContext";
+
+function Header() {
+  const { isDarkMode, toggleTheme } = useContext(AppContext);
 
   return (
     <header>
       <h1>Blog</h1>
-      
-    
       <div className="toggle-container" onClick={toggleTheme}>
         <div className={`toggle-button ${isDarkMode ? "dark-mode" : ""}`}>
-          {isDarkMode ? "🌙" : "🌞"}
+          {isDarkMode ? "🌙" : "☀️"}
         </div>
       </div>
-
     </header>
   );
 }
+
+export default Header;
