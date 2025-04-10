@@ -20,5 +20,6 @@ VITE_GIPHY_API_KEY
 
 npm install react-router-dom
 json-server --watch db.json --port 3001
-npm create vite@latest
+npm create vite@latest              
 npm i axios
+npm install @reduxjs/toolkit react-redux

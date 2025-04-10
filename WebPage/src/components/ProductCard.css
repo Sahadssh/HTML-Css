@@ -1,0 +1,133 @@
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-image {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.badge {
+  position: absolute;
+  background: #facc15;
+  color: #111;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  top: 10px;
+  right: 10px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+  color: #1f2937;
+}
+
+.description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.stars {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.add-btn {
+  background: #facc15;
+  color: #1f2937;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #eab308;
+}
+
+/* Responsive Grid */
+.product-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: 40px 20px;
+}
+
+
+.add-to-cart-btn, .go-to-cart-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(to right, #f7c02d, #f4a809);
+  color: #000;
+}
+
+.add-to-cart-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #f4a809, #f7c02d);
+}
+
+.go-to-cart-btn {
+  background: linear-gradient(to right, #00b894, #00cec9);
+  color: white;
+}
+
+.go-to-cart-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #00cec9, #00b894);
+}

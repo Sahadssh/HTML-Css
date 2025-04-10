@@ -1,0 +1,52 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Absolute positioned rotating image at top-left */
+.rotating-image-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 4px solid #fff;
+  background-color: #fff;
+  z-index: 5;
+}
+
+.rotating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product Grid stays centered */
+.product-grid-wrapper {
+  margin-top: 160px; /* Give space for the circle */
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .rotating-image-container {
+    width: 100px;
+    height: 100px;
+    top: 15px;
+    left: 15px;
+  }
+
+  .product-grid-wrapper {
+    margin-top: 140px;
+    gap: 16px;
+  }
+}
