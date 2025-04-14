@@ -8,6 +8,7 @@ const countryStateCity = [
         countryId: 1,
         name: "Maharashtra",
         cities: [
+
           { id: 1, stateId: 1, name: "Mumbai" },
           { id: 2, stateId: 1, name: "Pune" },
         ],
